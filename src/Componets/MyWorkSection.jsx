@@ -32,7 +32,7 @@ const MyWorkSection = () => {
         "A personal portfolio website showcasing my work and skills.",
       image: "https://via.placeholder.com/400", // Replace with your project image URL
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com",
+      github: "https://github.com/Zohaibkhan2610",
       liveDemo: "#",
     },
   ];

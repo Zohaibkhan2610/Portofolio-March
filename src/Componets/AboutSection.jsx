@@ -56,7 +56,7 @@ const AboutSection = () => {
             <h3 className="text-3xl sm:text-4xl font-bold flex items-center mb-4">
               Hi, I'm{" "}
               <span className="ml-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-emerald-500 to-green-600 animate-floating-glow">
-                [Your Name]
+                Zohaib Ur Rehman
               </span>
             </h3>
             <p className="text-gray-300 leading-relaxed">

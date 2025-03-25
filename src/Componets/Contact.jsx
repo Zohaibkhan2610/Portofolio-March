@@ -96,7 +96,7 @@ const ContactSection = () => {
                   value={formState.name}
                   onChange={handleChange}
                   required
-                  placeholder="John Doe"
+                  placeholder="Zohaib Ur Rehman"
                   className={`w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 ${
                     errors.name ? "border-red-500" : "focus:ring-blue-500"
                   }`}
@@ -117,7 +117,7 @@ const ContactSection = () => {
                   value={formState.email}
                   onChange={handleChange}
                   required
-                  placeholder="johndoe@example.com"
+                  placeholder="smartway@example.com"
                   className={`w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 ${
                     errors.email ? "border-red-500" : "focus:ring-blue-500"
                   }`}

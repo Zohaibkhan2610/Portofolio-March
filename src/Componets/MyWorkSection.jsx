@@ -23,7 +23,7 @@ const MyWorkSection = () => {
       image: "TaskManagement.png", // Replace with your project image URL
       technologies: ["React Native", "Firebase", "Expo"],
       github: "https://github.com/Zohaibkhan2610",
-      liveDemo: "#",
+      liveDemo: "https://taskmanagement-flax.vercel.app/",
     },
     {
       id: 3,

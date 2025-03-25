@@ -38,7 +38,7 @@ const AboutSection = () => {
             className="flex justify-center lg:justify-start"
           >
             <img
-              src="https://via.placeholder.com/400" // Replace with your profile image URL
+              src="me.png" // Replace with your profile image URL
               alt="Profile"
               className="w-64 h-64 rounded-full object-cover border-4 border-blue-500 shadow-lg"
             />

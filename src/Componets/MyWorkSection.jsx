@@ -27,13 +27,13 @@ const MyWorkSection = () => {
     },
     {
       id: 3,
-      title: "Portfolio Website",
+      title: "First Portfolio",
       description:
         "A personal portfolio website showcasing my work and skills.",
-      image: "https://via.placeholder.com/400", // Replace with your project image URL
+      image: "First Portfolio.png", // Replace with your project image URL
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
       github: "https://github.com/Zohaibkhan2610",
-      liveDemo: "#",
+      liveDemo: "https://portofolio-jan-25.vercel.app/",
     },
   ];
 

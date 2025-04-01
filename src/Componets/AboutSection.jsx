@@ -53,7 +53,7 @@ const AboutSection = () => {
             className="space-y-6"
           >
             {/* Attractive Name (Only Name Animated) */}
-            <h3 className="text-3xl sm:text-4xl font-bold flex items-center mb-4">
+            <h3 className="text-3xl sm:text-4xl font-bold flex flex-col md:flex-row items-center mb-4">
               Hi, I'm{" "}
               <span className="ml-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-emerald-500 to-green-600 animate-floating-glow">
                 Zohaib Ur Rehman
@@ -80,7 +80,7 @@ const AboutSection = () => {
 
             {/* Call-to-Action Button */}
             <motion.a
-              href="/resume.pdf" // Replace with your resume link
+              href="/" // Replace with your resume link
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

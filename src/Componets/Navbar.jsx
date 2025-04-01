@@ -69,6 +69,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
+      <div className="flex flex-col justify-center items-center">
       <motion.ul
         variants={{
           hidden: { opacity: 0, height: 0 },
@@ -77,13 +78,14 @@ const Navbar = () => {
         initial="hidden"
         animate={isOpen ? "visible" : "hidden"}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className={`md:hidden flex flex-col mt-4 space-y-2 ${isOpen ? "block" : "hidden"}`}
+        className={`md:hidden flex flex-col absolute ease bg-gray-900 w-full duration-700 mt-[17vh] space-y-2 text-center justify-center ${isOpen ? "translate-y-0" : "translate-y-[-30vh] "}`}
       >
         <NavItem onClick={() => scrollToSection("home")}>Home</NavItem>
         <NavItem onClick={() => scrollToSection("about")}>About</NavItem>
         <NavItem onClick={() => scrollToSection("services")}>Services</NavItem>
         <NavItem onClick={() => scrollToSection("contact")}>Contact</NavItem>
       </motion.ul>
+      </div>
     </nav>
   );
 };

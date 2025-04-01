@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import {
   FaEnvelope, // Email Icon
   FaPhone, // Phone Icon
@@ -36,19 +37,42 @@ const ContactSection = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Simulated form submission handler
+  // EmailJS form submission handler
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Form Data:", formState); // Replace with actual API call or backend integration
-      alert("Thank you for reaching out! I'll get back to you soon.");
-      setFormState({ name: "", email: "", subject: "", message: "" });
-      setErrors({});
+      // Send email using EmailJS
+      emailjs
+        .send(
+          "zservice_t5tz7dnk", // Replace with your EmailJS Service ID
+          "template_aa8uaxg", // Replace with your EmailJS Template ID
+          {
+            from_name: formState.name,
+            from_email: formState.email,
+            subject: formState.subject,
+            message: formState.message,
+          },
+          "jqCHRwz76M5Gf0arU" // Your EmailJS Public Key
+        )
+        .then(
+          (result) => {
+            alert("Thank you for reaching out! I'll get back to you soon.");
+            setFormState({ name: "", email: "", subject: "", message: "" });
+            setErrors({});
+          },
+          (error) => {
+            console.error("Error sending email:", error);
+            alert("An error occurred. Please try again later.");
+          }
+        );
     }
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
+    <section
+      id="contact"
+      className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20"
+    >
       {/* Section Title */}
       <div className="text-center mb-12">
         <motion.h2
@@ -86,7 +110,10 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2"
+                >
                   Your Name
                 </label>
                 <input
@@ -107,7 +134,10 @@ const ContactSection = () => {
               </div>
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2"
+                >
                   Your Email
                 </label>
                 <input
@@ -128,7 +158,10 @@ const ContactSection = () => {
               </div>
               {/* Subject Field */}
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium mb-2"
+                >
                   Subject
                 </label>
                 <input
@@ -149,7 +182,10 @@ const ContactSection = () => {
               </div>
               {/* Message Field */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -198,8 +234,11 @@ const ContactSection = () => {
                 >
                   <FaEnvelope className="h-6 w-6" />
                 </motion.div>
-                <a href="mailto:your-email@example.com" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  your-email@example.com
+                <a
+                  href="mailto:Zohaibkhan2610765@gamil.com"
+                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                >
+                  Zohaibkhan2610765@gamil.com
                 </a>
               </div>
               {/* Phone */}
@@ -210,8 +249,11 @@ const ContactSection = () => {
                 >
                   <FaPhone className="h-6 w-6" />
                 </motion.div>
-                <a href="tel:+1234567890" className="text-gray-300 hover:text-green-400 transition-colors">
-                  +1 (234) 567-890
+                <a
+                  href="tel:+923410482983"
+                  className="text-gray-300 hover:text-green-400 transition-colors"
+                >
+                  +92 341 0482983
                 </a>
               </div>
               {/* Divider */}
@@ -219,7 +261,7 @@ const ContactSection = () => {
               {/* Social Media Links */}
               <div className="flex items-center space-x-4">
                 <motion.a
-                  href="https://github.com"
+                  href="https://github.com/Zohaibkhan2610"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2 }}
@@ -228,7 +270,7 @@ const ContactSection = () => {
                   <FaGithub className="h-6 w-6" />
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com"
+                  href="/"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2 }}

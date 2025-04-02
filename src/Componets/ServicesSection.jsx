@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLaptopCode, FaPaintBrush, FaBook, FaBullseye, FaSearch, FaWrench } from "react-icons/fa";
+import {
+  FaLaptopCode,
+  FaPaintBrush,
+  FaBook,
+  FaBullseye,
+  FaSearch,
+  FaWrench,
+} from "react-icons/fa";
 
 const ServicesSection = () => {
   // Smooth Scroll Function
@@ -123,7 +130,9 @@ const ServicesSection = () => {
                 {service.icon}
               </div>
               {/* Title */}
-              <h3 className="text-xl font-bold text-center mb-4">{service.title}</h3>
+              <h3 className="text-xl font-bold text-center mb-4">
+                {service.title}
+              </h3>
               {/* Description */}
               <p className="text-gray-300 text-center leading-relaxed mb-6">
                 {service.description}

@@ -60,11 +60,13 @@ const AboutSection = () => {
               </span>
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              A passionate web developer specializing in building dynamic and responsive web applications. With expertise in{" "}
+              A passionate web developer specializing in building dynamic and
+              responsive web applications. With expertise in{" "}
               <SkillTag name="React" color="bg-blue-500" />,{" "}
               <SkillTag name="JavaScript" color="bg-green-500" />,{" "}
               <SkillTag name="Tailwind CSS" color="bg-purple-500" />, and{" "}
-              <SkillTag name="HTML/CSS" color="bg-yellow-500" />, I create user-friendly interfaces that deliver exceptional experiences.
+              <SkillTag name="HTML/CSS" color="bg-yellow-500" />, I create
+              user-friendly interfaces that deliver exceptional experiences.
             </p>
 
             {/* Skills Showcase */}
@@ -120,8 +122,5 @@ const SkillCard = ({ name, color }) => {
 };
 
 export default AboutSection;
-
-
-
 
 // Zohaib Ur Rehman

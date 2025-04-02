@@ -33,7 +33,9 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-8">
           <NavItem onClick={() => scrollToSection("home")}>Home</NavItem>
           <NavItem onClick={() => scrollToSection("about")}>About</NavItem>
-          <NavItem onClick={() => scrollToSection("services")}>Services</NavItem>
+          <NavItem onClick={() => scrollToSection("services")}>
+            Services
+          </NavItem>
           <NavItem onClick={() => scrollToSection("contact")}>Contact</NavItem>
         </ul>
 
@@ -51,7 +53,12 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             ) : (
               <svg
@@ -61,30 +68,68 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
               </svg>
             )}
           </button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <div className="flex flex-col justify-center items-center">
-      <motion.ul
-        variants={{
-          hidden: { opacity: 0, height: 0 },
-          visible: { opacity: 1, height: "auto" },
-        }}
-        initial="hidden"
-        animate={isOpen ? "visible" : "hidden"}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className={`md:hidden flex flex-col absolute ease bg-gray-900 w-full duration-700 mt-[17vh] space-y-2 text-center justify-center ${isOpen ? "translate-y-0" : "translate-y-[-30vh] "}`}
-      >
-        <NavItem onClick={() => scrollToSection("home")}>Home</NavItem>
-        <NavItem onClick={() => scrollToSection("about")}>About</NavItem>
-        <NavItem onClick={() => scrollToSection("services")}>Services</NavItem>
-        <NavItem onClick={() => scrollToSection("contact")}>Contact</NavItem>
-      </motion.ul>
+        <motion.ul
+          variants={{
+            hidden: { opacity: 0, height: 0 },
+            visible: { opacity: 1, height: "auto" },
+          }}
+          initial="hidden"
+          animate={isOpen ? "visible" : "hidden"}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className={`md:hidden flex flex-col absolute ease bg-gray-900 w-full duration-700 mt-[17vh] space-y-2 text-center justify-center ${
+            isOpen ? "translate-y-0" : "translate-y-[-30vh]"
+          }`}
+        >
+          {/* Add 100ms delay before closing to allow scroll */}
+          <NavItem
+            onClick={() => {
+              scrollToSection("home");
+              setTimeout(() => setIsOpen(false), 500);
+            }}
+          >
+            Home
+          </NavItem>
+
+          <NavItem
+            onClick={() => {
+              scrollToSection("about");
+              setTimeout(() => setIsOpen(false), 500);
+            }}
+          >
+            About
+          </NavItem>
+
+          <NavItem
+            onClick={() => {
+              scrollToSection("services");
+              setTimeout(() => setIsOpen(false), 500);
+            }}
+          >
+            Services
+          </NavItem>
+
+          <NavItem
+            onClick={() => {
+              scrollToSection("contact");
+              setTimeout(() => setIsOpen(false), 500);
+            }}
+          >
+            Contact
+          </NavItem>
+        </motion.ul>
       </div>
     </nav>
   );

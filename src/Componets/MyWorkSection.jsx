@@ -12,7 +12,7 @@ const MyWorkSection = () => {
         "A fully responsive e-commerce platform built with React, Redux, and Node.js.",
       image: "Ecomerace.png", // Replace with your project image URL
       technologies: ["React", "Redux", "Node.js", "MongoDB"],
-      github: "https://github.com/Zohaibkhan2610", // Replace with actual GitHub link
+      github: "https://github.com/Zohaibkhan2610/familyshop", // Replace with actual GitHub link
       liveDemo: "https://familyshop-rose.vercel.app/", // Replace with actual live demo link or use `Link`
     },
     {
@@ -22,7 +22,7 @@ const MyWorkSection = () => {
         "A task management app designed for productivity with real-time updates.",
       image: "TaskManagement.png", // Replace with your project image URL
       technologies: ["React Native", "Firebase", "Expo"],
-      github: "https://github.com/Zohaibkhan2610",
+      github: "https://github.com/Zohaibkhan2610/taskmanagement",
       liveDemo: "https://taskmanagement-flax.vercel.app/",
     },
     {
@@ -32,7 +32,7 @@ const MyWorkSection = () => {
         "A personal portfolio website showcasing my work and skills.",
       image: "First Portfolio.png", // Replace with your project image URL
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/Zohaibkhan2610",
+      github: "https://github.com/Zohaibkhan2610/Portofolio-jan-25",
       liveDemo: "https://portofolio-jan-25.vercel.app/",
     },
   ];

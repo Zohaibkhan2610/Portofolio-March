@@ -52,7 +52,7 @@ const ContactSection = () => {
             subject: formState.subject,
             message: formState.message,
           },
-          "jqCHRwz76M5Gf0arU" // Your EmailJS Public Key
+          "JTzilstTt3xAVNVAq" // Your EmailJS Public Key
         )
         .then(
           (result) => {

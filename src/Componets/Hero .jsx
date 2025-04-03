@@ -55,7 +55,7 @@ const HeroSection = () => {
           {/* View My Work Button */}
           <button
             onClick={() => scrollToSection("portfolio")}
-            className="inline-block px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-md hover:from-blue-600 hover:to-purple-700 transition duration-300"
+            className="glow-on-hover px-3 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-gray-200 transition duration-300"
           >
             View My Work
           </button>
@@ -63,7 +63,7 @@ const HeroSection = () => {
           {/* Contact Me Button */}
           <button
             onClick={() => scrollToSection("contact")}
-            className="inline-block px-3 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-gray-200 bg-gray-800 rounded-lg shadow-md hover:bg-gray-700 transition duration-300"
+            className="glow-on-hover px-3 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-gray-200 transition duration-300"
           >
             Contact Me
           </button>

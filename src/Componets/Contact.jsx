@@ -205,14 +205,15 @@ const ContactSection = () => {
                 )}
               </div>
               {/* Submit Button */}
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:from-blue-600 hover:to-purple-700 transition duration-300"
-              >
-                Send Message
-              </motion.button>
+
+              <div className="flex justify-center items-center">
+                <button
+                  class="w-[80%] glow-on-hover py-3 px-6 text-base sm:text-lg font-medium text-gray-200 transition duration-300"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </div>
             </form>
           </motion.div>
 
